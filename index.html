@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!--Nav Bar-->
+    <nav class="fixed top-0 left-0 z-50 w-full bg-blue-100 shadow-md">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+             <img class="w-6 h-6 sm:w-8 sm:h-8" src="/PICTURE/GOO.png" alt="">
+           <!---Desktop Menu-->
+             <div class="items-center hidden space-x-8 md:flex">
+                <a href="#" class="text-blue-700 font-bold transition hover:text-red-600">Home</a>
+                <a href="#" class="text-blue-700 font-bold transition hover:text-red-600">About</a>
+                <a href="#" class="text-blue-700 font-bold transition hover:text-red-600">Service</a>
+                <a href="#" class="text-blue-700 font-bold transition hover:text-red-600">Portfolio</a>
+                <a href="#" class="text-blue-700 font-bold transition hover:text-red-600">Contact</a>
+             </div>
+            <div class="hidden md:block">
+                <button class="px-5 py-2 text-white transition bg-indigo-600 rounded-lg hover:bg-yellow-400">Get Started</button>
+            </div>
+            <!---Mobile Menu Button-->
+            <button
+            id="menu-btn"
+            class="flex  items-center justify-center w-10 h-10 rounded-lg md:hidden hover:bg--gray-100"
+            >
+           <!----Hamburger Icon-->
+           <svg
+           id="menu-open"
+           xmlns="http://www.w3.org/2000/svg"
+           class="w-6 h-6"
+           full="none"
+           viewBox="0 0 24 24"
+           stroke="currentcolor"
+           >
+           <path
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           stroke-width="2"
+           d="M4 6h16M4 12h16M4 18h16"
+           />
+        </svg>
+
+        <!----Close Icon-->
+        <svg
+        id="menu-close"
+        xmlns="http://www.w3.org/2000/svg"
+        class="hidden w-6 h-6"
+           full="none"
+           viewBox="0 0 24 24"
+           stroke="currentcolor"
+         >
+          <path
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           stroke-width="2"
+           d="M6 18L18 6M6 6l12 12"
+           />
+            </svg>
+            </button>
+
+            </div>
+        </div>
+        <!--Mobile Menu-->
+        <div id="mobile-menu" class="hidden bg-white border-t md:hidden">
+         <a href="#" class="block px-6 py-3 hover:bg--gray-100">Home</a>
+         <a href="#" class="block px-6 py-3 hover:bg--gray-100">About</a>
+         <a href="#" class="block px-6 py-3 hover:bg--gray-100">Services</a>
+         <a href="#" class="block px-6 py-3 hover:bg--gray-100">Portfolio</a>
+         <a href="#" class="block px-6 py-3 hover:bg--gray-100">Contact</a>
+
+         <div class="p-4">
+            <button class="w-full py-3 text-white transition bg-indigo-600 rounded-lg hover:bg-violet-700"> Get Started</button>
+         </div>
+        </div>
+    </nav>
+    <script>
+     const menuBtn = document.getElementById("menu-btn");
+     const mobileMenu = document.getElementById("mobile-menu");
+     const openIcon = document.getElementById("menu-open");
+     const closeIcon = document.getElementById("menu-close");
+
+     menuBtn.addEventListener("click",() =>{
+     mobileMenu.classList.toggle("hidden");
+     openIcon.classList.toggle("hidden");
+     closeIcon.classList.toggle("hidden");
+     })
+     </script>
+
+
+     <h2 class="text-2xl font-bold text-center md:text-5xl pt-20 ">Building Dreams, One Brick at a Time</h2>
+     <p class="text-center text-xl md:text-2xl mt-2">Creating Exceptional Space that Define Your Vision</p>
+
+     <img src="/PICTURE/Rectangle 1.png" alt="" class="items-center pt-5 animate-sway md:mx-auto">
+
+     <div class="pt-5 px-3 md:flex gap-10 md:px-20">
+      <div class="w-full">
+      <button class="px-5 py-2  w-full text-white transition bg-blue-600 hover:bg-green-700 text-xl md:w-80 ">Learn More</button>
+      </div>
+       <div class="w-full">
+      <button class="w-full py-2 mt-2 border border-black transition hover:bg-indigo-700 text-xl border-black md:w-80 md:mt-0">Contact Us</button>
+       </div>
+      <div class="flex items-center gap-4 mt-2 md:gap-10 md:mt-0">
+      <div class="font-bold">
+        <h1 class="text-center md:text-2xl">100</h1>
+        <p>Satisfied clients</p>
+      </div>
+
+      <div class="font-bold">
+        <h1 class="text-center md:text-2xl">150</h1>
+        <p>Finished project</p>
+      </div>
+
+      <div class="font-bold">
+        <h1 class="text-center md:text-2xl">70</h1>
+        <p>Official contracts</p>
+      </div>
+      </div>
+
+      </div>
+      <h3 class="text-center font-bold text-xl md:text-2xl pt-5">Why Choose Us</h3>
+      <div class="grid grid-cols-1 gap-2 pt-5 items-center  px-2 md:flex justify-center
+       ">
+        <div class="bg-indigo-100 px-8 py-12 rounded-lg">
+            <h4 class="font-bold md:text-2xl">Trusted Expertise</h4>
+            <p>Decades for experience for exceptional results</p>
+        </div>
+        <div class="bg-indigo-100 px-8 py-12 rounded-lg">
+            <h4 class="font-bold md:text-2xl">Craftiing Qualilty</h4>
+            <p>Meticulous Craftsmanship, top-tier materials</p>
+        </div>
+        <div class="bg-indigo-100 px-8 py-12 rounded-lg">
+            <h4 class="font-bold md:text-2xl">Your Vision, Our Focus</h4>
+            <p>Tailored solutions for your unique project</p> 
+        </div>
+      </div>
+
+       <div class="text-center text-xl font-bold pt-5 md:text-2xl">
+        <h2>About Us</h2>
+       </div>
+
+      <div class="grid pt-5 px-2 gap-5 justify-center md:flex md:px-10 md:gap-10 ">
+      <div>
+       <p class="text-2xl md:mt-12">Welcoome to AkinsBuild, where construction meets Craftsmanship. with over 10years of experience, we have been dedicated to creating spaces that inspire. At AkinsBuild, we are not just builders, we're ppartners your project's success.Let us build  something extraordinary together.</p>
+       <button class="w-full bg-blue-600 text-white rounded-md p-2 border border-black mt-4 text-xl hover:bg-blue-100 hover:text-red-600 md:text-2xl md:w-80">Learn More</button>
+       </div>
+       <div class="md:4/5">
+        <img src="/PICTURE/Rectangle 4.png" alt="" class="w-full animate-bounce md:w-screen md:h-75 rounded-lg ">
+       </div>
+       </div>
+        <div class="text-center text-xl font-bold pt-5 md:text-2xl">
+       <h2>What we offer</h2>
+       </div>
+       <div class="grid grid-cols-1 gap-5 px-5 mt-4 md:flex">
+
+     <div class="bg-indigo-100 px-8 py-8 rounded-lg">
+      <img src="/PICTURE/Group 6.png" alt="">
+     <p class="font-bold text-xl md:text-2xl" >Custom Building Construction</p>
+     <p>Tailored to meet your unique vision and preferences, our custom buuiding construction service brings dream homes to life. We work closely with you to create a residence that suit your lifestyle</p>
+     </div>
+  <div class="bg-indigo-100 px-8 py-8 rounded-lg">
+    <img src="/PICTURE/Group 9.png" alt="">
+    <p class="font-bold text-xl md:text-2xl" >Renovation and Remodeling</p>
+     <p>Enhance and revitalize your commercial space with our renovation and Remodeling Expertise. We provide solutions to transform your property, improving functionality and aesthetic</p>
+  </div>
+  <div class="bg-indigo-100 px-8 py-8 rounded-lg">
+    <img src="/PICTURE/Group 7.png" alt="">
+    <p class="font-bold text-xl md:text-2xl" >Sustainable Building Solution</p>
+     <p>Committed to environmental responsibility, our Sustainable building solutions integrate eco-friendly practices and materials into your construction projects. </p>
+  </div>
+</div>
+<div>
+  <h2 class="text-center text-xl font-bold pt-5 md:text-2xl">Our Projects</h2>
+</div>
+ <div class="grid grid-cols-1 gap-5 p-6 px-2 md:flex md:px-8 md:justify-center items-center">
+<div>
+  <img src="/PICTURE/Rectangle 6.png" alt="">
+  <p class="font-bold text-xl md:text-2xl">2 Bedrooms Bungalow</p>
+  <a href="#" class="text-red-500 transition hover:text-indigo-600">Read more</a>
+</div>
+<div>
+  <img src="/PICTURE/Rectangle 7 (1).png" alt="">
+  <p class="font-bold text-xl md:text-2xl">3 Bedrooms with Basement</p>
+  <a href="#" class="text-red-500 transition hover:text-indigo-600">Read more</a>
+</div>
+<div>
+  <img src="/PICTURE/Rectangle 8.png" alt="">
+  <p class="font-bold text-xl md:text-2xl">5 Bedrooms Mansion</p>
+  <a href="#" class="text-red-500 transition hover:text-indigo-600">Read more</a>
+</div>
+</div>
+ <div class="text-center text-xl font-bold pt-3 md:text-2xl">
+  <h2>Frequently asked questions</h2>
+ </div>
+ <div class="space-y-3 px-2 "> 
+  <p class="bg-indigo-100 p-4 rounded-md mt-2 md:text-xl">What types of construction projects does your company handle?  </p>
+   <p class="bg-indigo-100 p-4 rounded-md md:text-xl">How do I request a quote for my project?</p>
+    <p class="bg-indigo-100 p-4 rounded-md md:text-xl">Do you offer sustainable or eco-friendly construction options?</p>
+ </div>
+ 
+ <div>
+  <h2 class="text-xl text-center font-bold pt-5 md:text-2xl">What customer say about us</h2>
+ </div>
+<div class="">
+ <div class="grid grid-cols-1  gap-5 p-6 pt-5  md:flex">
+  <div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugiat qui molestias, cum ut ad excepturi sequi, at amet odio illum.</p>
+  <div class="flex gap-8">
+      <P class="text-indigo-600 mt-2 font-bold">Dr. Andrew James</P>
+      <img src="/PICTURE/man1.jpeg" alt="" class="w-12 rounded-full">
+    </div>
+  </div>
+  <div>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugiat qui molestias, cum ut ad excepturi sequi, at amet odio illum.</p>
+    <div class="flex gap-8">
+      <P class="text-indigo-600 mt-2 font-bold">Dr. Adeagbo Daramola</P>
+      <img src="/PICTURE/man2.jpeg" alt="" class="w-8 rounded-full">
+    </div>
+  </div>
+  <div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugiat qui molestias, cum ut ad excepturi sequi, at amet odio illum.</p>
+    <div class="flex gap-8">
+      <P class="text-indigo-600 mt-2 font-bold">Dr. Bola Ahmed</P>
+      <img src="/PICTURE/man3.jpeg" alt="" class="w-8 rounded-full">
+    </div>
+    </div>
+ </div>
+  </div>
+  <div>
+    <div>
+      <h2 class="text-xl text-center font-bold pt-5 md:text-2xl">Get through with us</h2>
+    </div>
+  <nav class="flex gap-6 p-6 justify-center items-center  md: ">
+    <a href="#" class="text-blue-700 hover:bg-green-700 hover:text-red-600">Portfolio</a>
+    <a href="#" class="text-blue-700 hover:bg-green-700 hover:text-red-600">Team</a>
+    <a href="#" class="text-blue-700 hover:bg-green-700 hover:text-red-600">Contact</a>
+    <img src="/PICTURE/instagram.png" alt="">
+    <img src="/PICTURE/linkein.png" alt="">
+  </nav>
+  </div>
+</body>
+</html>
