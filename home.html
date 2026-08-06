@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+        <body class="bg-[#FAFAFA]">
+ <!--Nav Bar-->
+    <nav class="fixed top-0 left-0 z-50 w-full bg-blue-200">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+             <img class="w-21 md:w-21" src="/PICTURE/logo.png" alt="">
+           <!---Desktop Menu-->
+             <div class="items-center hidden space-x-8 md:flex">
+                <a href="home.html" class="text-[#004E7E] font-bold transition hover:text-red-600">Home</a>
+                <a href="About.html" class="text-[#004E7E] font-bold transition hover:text-red-600">About</a>
+                <a href="service.html" class="text-[#004E7E] font-bold transition hover:text-red-600">Service</a>
+             </div>
+            <div class="hidden md:block">
+                <a href="contact.html"><button class="px-10 py-2 text-white rounded-lg bg-[#004E7E] hover:bg-yellow-400">Contact Us</button></a>
+            </div>
+            <!---Mobile Menu Button-->
+            <button
+            id="menu-btn"
+            class="flex  items-center justify-center w-10 h-10 rounded-lg md:hidden hover:bg--gray-100"
+            >
+           <!----Hamburger Icon-->
+           <svg
+           id="menu-open"
+           xmlns="http://www.w3.org/2000/svg"
+           class="w-6 h-6"
+           full="none"
+           viewBox="0 0 24 24"
+           stroke="currentcolor"
+           >
+           <path
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           stroke-width="2"
+           d="M4 6h16M4 12h16M4 18h16"
+           />
+        </svg>
+
+        <!----Close Icon-->
+        <svg
+        id="menu-close"
+        xmlns="http://www.w3.org/2000/svg"
+        class="hidden w-6 h-6"
+           full="none"
+           viewBox="0 0 24 24"
+           stroke="currentcolor"
+         >
+          <path
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           stroke-width="2"
+           d="M6 18L18 6M6 6l12 12"
+           />
+            </svg>
+            </button>
+
+            </div>
+        </div>
+        <!--Mobile Menu-->
+        <div id="mobile-menu" class="hidden bg-white border-t md:hidden">
+         <a href="home.html" class="block px-6 py-3 hover:bg--gray-100">Home</a>
+         <a href="About.html" class="block px-6 py-3 hover:bg--gray-100">About</a>
+         <a href="service.html" class="block px-6 py-3 hover:bg--gray-100">Services</a>
+
+         <div class="p-4 px-10 ">
+            <a href="contact.html"><button class="w-full py-3 text-white rounded-lg bg-[#004E7E] hover:bg-yellow-400">Contact Us</button></a>
+         </div>
+        </div>
+    </nav>
+    <script>
+     const menuBtn = document.getElementById("menu-btn");
+     const mobileMenu = document.getElementById("mobile-menu");
+     const openIcon = document.getElementById("menu-open");
+     const closeIcon = document.getElementById("menu-close");
+
+     menuBtn.addEventListener("click",() =>{
+     mobileMenu.classList.toggle("hidden");
+     openIcon.classList.toggle("hidden");
+     closeIcon.classList.toggle("hidden");
+     })
+     </script>
+
+
+    <div class="relative mt-20 md:mt-20">
+    <img src="/PICTURE/Rectangle 1.png" alt="" class="w-full opacity-[0.4] md:mx-auto">
+    </div>
+<div class="absolute top-10 left-0 pt-20 right-0 justify-center px-10 md:px-20 md:mt-0 md:top-40">
+<h1 class="text-xl text-[#004E7E] font-bold md:text-5xl">Find Your <span class="text-blue-500">Dream Home</span>
+</h1>
+<p class="text-[#004E7E] font-bold text-secondary-fixed/80 mb-2 max-w-lg md:text-2xl md:mb-8 md:mt-10">Discover exclusive luxury listings and be spoke real estate services tailored to your sophisticated lifestyle.</p>
+
+<div class="hidden grid grid-cols-2 gap-2 w-full p-2 bg-[#004E7E] md:flex md:w-1/2 md:p-6 md:px-5">
+    <div class="flex flex-col flex-1">
+    <label for="location" class="text-white font-bold">LOCATION</label>
+    <input type="text" placeholder="Where to?">
+    </div>
+
+     <div class="flex flex-col flex-1">
+    <label for="location" class="text-white font-bold uppercase">Propery Type</label>
+    <input type="text" placeholder="All types">
+    </div>
+
+    <div class="flex flex-col flex-1">
+        <label for="location" class="text-white font-bold uppercase">Max price</label>
+    <input type="text" placeholder="Any price">
+    </div>
+</div>
+</div>
+<div class="block grid grid-cols-2 gap-2 w-full px-10 p-2 bg-[#004E7E] md:hidden">
+    <div class="flex flex-col flex-1">
+    <label for="location" class="text-white font-bold">LOCATION</label>
+    <input type="text" placeholder="Where to?">
+    </div>
+
+     <div class="flex flex-col flex-1">
+    <label for="location" class="text-white font-bold uppercase">Propery Type</label>
+    <input type="text" placeholder="All types">
+    </div>
+
+    <div class="flex flex-col flex-1">
+        <label for="location" class="text-white font-bold uppercase">Max price</label>
+    <input type="text" placeholder="Any price">
+    </div>
+</div>
+</div>
+<p class="uppercase pl-5 mt-4 font-bold">Curated Selection</p>
+<h2 class="text-[#004E7E] font-bold mt-2 pl-5 md:text-3xl">Featured Properties</h2>
+
+<a class="group flex pr-5 justify-end gap-2 transition-colors" href="#"> VIEW ALL LISTINGS
+                    <img src="/PICTURE/arrow.png" alt="" class="group-hover:translate-x-1 transition-transform w-8 h-8">
+</a>
+
+<div class="grid grid-cols-1 gap-6 px-10 md:flex md:px-20">
+    <div class="max-w-sm overflow-hidden rounded-lg bg-white shadow-md">
+  <img class="w-full object-cover h-60" src="/PICTURE/sit1.jpg" alt="Product" class="w-96 hover:scale-90 transition:transform duration-700"/>
+  <div class="p-5">
+    <h5 class="mb-2 text-xl font-bold text-[#004E7E] md:text-2xl">The Obsidian Villa <span class="text-green-400">$4,250,000</span></h5>
+    <p class="md:text-xl">
+    <span>Location_on</span> Beverly Hills, CA</p>
+  </div>
+</div>
+
+     <div class="max-w-sm overflow-hidden rounded-lg bg-white shadow-md">
+  <img class="w-full object-cover h-60" src="/PICTURE/sit4.webp" alt="Product" class="w-96"/>
+  <div class="p-5">
+    <h5 class="mb-2 text-xl font-bold text-[#004E7E] md:text-2xl">Skyline Penthouse <span class="text-green-400">$2,800,000</span></h5>
+    <p class="md:text-xl">
+    <span>Location_on</span>Manhattan, NY</p>
+  </div>
+</div>
+
+    <div class="max-w-sm overflow-hidden rounded-lg bg-white shadow-md">
+  <img class="w-full object-cover h-60" src="/PICTURE/sit3.webp" alt="Product" class="w-96"/>
+  <div class="p-5">
+    <h5 class="mb-2 text-xl font-bold text-[#004E7E] md:text-2xl">The Forest Retreat <span class="text-green-400">$4,250,000</span></h5>
+    <p class="md:text-xl">
+    <span>Location_on</span> Aspen, CO</p>
+  </div>
+</div>
+</div>
+<div class="bg-blue-200 pt-20 pb-20 mt-10">
+    <h1 class="text-xl uppercase font-bold md:text-2xl text-center">Our Advantage</h1>
+    <h2 class="mt-2 text-[#004E7E] text-xl text-center font-bold md:text-4xl">Elevating the Real Estate Experience</h2>
+
+<div class="grid grid-cols-2 gap-2 px-10 mt-10 md:flex md:px-20 md:gap-6">
+    <div>
+        <div class="md:flex justify-center items-center">
+        <img src="/PICTURE/trend.png" alt="" class="w-10 h-10 border bg-blue-50 border-[#004E7E]  hover:bg-green-300 hover:text-red-500 rounded-lg">
+        </div>
+        <h3 class="mt-2 text-[#004E7E] text-xl font-bold md:text-2xl md:text-center">Market Expertise</h3>
+        <p class="md:text-xl md:text-center">Leveraging deep data analytics and local insights to secure the best value in a competitive landscape.</p>
+    </div>
+    <div>
+        <div class="md:flex justify-center items-center">
+        <img src="/PICTURE/person.jpg" alt="" class="w-10 h-10 border bg-blue-50 border-[#004E7E]  hover:bg-green-300 hover:text-red-500 rounded-lg">
+        </div>
+        <h3 class="mt-2 text-[#004E7E] text-xl md:text-center font-bold md:text-2xl">Personalized Service</h3>
+        <p class="md:text-xl md:text-center">Your goals are our blueprint. We provide bespoke white-glove service at every step of your journey.</p>
+    </div>
+    <div>
+        <div class="md:flex justify-center items-center">
+        <img src="/PICTURE/trend.png" alt="" class="w-10 h-10 border bg-blue-50 border-[#004E7E]  hover:bg-green-300 hover:text-red-500 rounded-lg">
+        </div>
+        <h3 class="mt-2 text-[#004E7E] text-xl md:text-center font-bold md:text-2xl">Trusted Results</h3>
+        <p class="md:text-xl md:text-center">A legacy of excellence and hundreds of successful high-stakes transactions across global markets.</p>
+    </div>
+</div>
+<div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-10 mt-10 px-10 md:flex md:px-20">
+    <div>
+<h2 class="text-[#004E7E] font-bold md:text-xl">Client Stories</h2> 
+<h1 class="mt-2 mb-8 font-bold text-xl md:text-4xl">What Our Clients Say</h1>
+<p class="mb-8 max-w-lg text-[#004E7E] md:text-xl">ZenithBuild redefined what it meant to work with a real estate firm. Their attention to detail and market knowledge helped us secure our dream home in Manhattan well below the asking price. Truly a masterclass in service.</p>
+
+<p class="font-bold text-on-surface">Jonathan Sterling</p>
+<p class="text-[#004E7E] font-bold">Tech CEO</p>
+    </div>
+    <div class="md:w-1/2 object-cover rounded-lg hover:scale-90 transition:transform duration-700">
+    <img src="/PICTURE/sit2.jpg" alt="" class="w-full h-[240px] md:h-[380px]">
+    </div>
+</div>
+
+<div class="grid grid-cols-1 justify-between bg-[#004E7E] p-12 mt-10 md:flex">
+    <div>
+<h2 class="text-white mb-2 text-xl font-bold md:text-3xl ">Ready to list your premium property?</h2>
+<p class="text-blue-400 font-bold">Get a complimentary valuation from our senior market analysts today.</p>
+</div>
+<div>
+    <button class="p-4 px-8 font-bold bg-blue-100 text-[#004E7E] w-full mt-4 border border-[#FAFAFA]  hover:bg-yellow-300 hover:text-red-500 md:text-xl md:mt-0 md:w-80 hover:scale-90 transition:transform duration-700">List Your Property</button>
+</div>
+</div>
+
+<div class="bg-blue-200 p-10 md:p-20">
+    <div class="grid grid-cols-2 gap-6 md:flex">
+    <div>
+        <h2 class="font-bold text-[#004E7E] mb-8 text-2xl md:text-5xl">ZenithBuild</h2>
+        <p class="mb-8 max-w-xs">Redefining luxury real estate through technology, integrity, and unparalleled service since 2020.</p>
+    </div>
+    <div><h3 class="font-bold md:text-xl">SOLUTIONS</h3>
+        <P><a href="link" class="text-[#004E7E] hover:text-red-500">Buying</a>
+        <P> <a href="link" class="text-[#004E7E] hover:text-red-500">Selling</a></P>
+        <P><a href="link" class="text-[#004E7E] hover:text-red-500">Management</a></P>
+        <P><a href="link" class="text-[#004E7E] hover:text-red-500">Investment</a></P>
+    </div>
+
+    <div><h3 class="font-bold md:text-xl">COMPANY</h3>
+        <P><a href="link" class="text-[#004E7E] hover:text-red-500">About us</a>
+        <P> <a href="link" class="text-[#004E7E] hover:text-red-500">Careers</a></P>
+        <P><a href="link" class="text-[#004E7E] hover:text-red-500">Newsroom</a></P>
+        <P><a href="link"class="text-[#004E7E] hover:text-red-500">Contact</a></P>
+    </div>
+    <div><h3 class="font-bold md:text-xl">LEGAL</h3>
+        <P><a href="link" class="text-[#004E7E] hover:text-red-500">Privacy policy</a>
+        <P> <a href="link" class="text-[#004E7E] hover:text-red-500">Terms of</a></P>
+        <P><a href="link" class="text-[#004E7E] hover:text-red-500">Services</a></P>
+        <P><a href="link" class="text-[#004E7E] hover:text-red-500">ZenithBuild</a></P>
+    </div>
+    </div>
+    <div class="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
+  <p>© 2024 ZenithBuild Premium Realty. All rights reserved.</p>
+   <div class="flex gap-6">
+   <a class="text-on-tertiary-container text-sm hover:text-white" href="#">Terms of Service</a>
+   <a class="text-on-tertiary-container text-sm hover:text-white" href="#">Cookie Policy</a>
+  </div>
+</div>
+</body>
+</html>

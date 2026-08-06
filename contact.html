@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-[#FAFAFA]">
+    <!--Nav Bar-->
+    <nav class="fixed top-0 left-0 z-50 w-full bg-blue-200">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+             <img class="w-21 md:w-21" src="/PICTURE/logo.png" alt="">
+           <!---Desktop Menu-->
+             <div class="items-center hidden space-x-8 md:flex">
+                <a href="home.html" class="text-[#004E7E] font-bold transition hover:text-red-600">Home</a>
+                <a href="About.html" class="text-[#004E7E] font-bold transition hover:text-red-600">About</a>
+                <a href="service.html" class="text-[#004E7E] font-bold transition hover:text-red-600">Service</a>
+             </div>
+            <div class="hidden md:block">
+                <button class="px-10 py-2 text-white rounded-lg bg-[#004E7E] hover:bg-yellow-400">Get Started</button>
+            </div>
+            <!---Mobile Menu Button-->
+            <button
+            id="menu-btn"
+            class="flex  items-center justify-center w-10 h-10 rounded-lg md:hidden hover:bg--gray-100"
+            >
+           <!----Hamburger Icon-->
+           <svg
+           id="menu-open"
+           xmlns="http://www.w3.org/2000/svg"
+           class="w-6 h-6"
+           full="none"
+           viewBox="0 0 24 24"
+           stroke="currentcolor"
+           >
+           <path
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           stroke-width="2"
+           d="M4 6h16M4 12h16M4 18h16"
+           />
+        </svg>
+
+        <!----Close Icon-->
+        <svg
+        id="menu-close"
+        xmlns="http://www.w3.org/2000/svg"
+        class="hidden w-6 h-6"
+           full="none"
+           viewBox="0 0 24 24"
+           stroke="currentcolor"
+         >
+          <path
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           stroke-width="2"
+           d="M6 18L18 6M6 6l12 12"
+           />
+            </svg>
+            </button>
+
+            </div>
+        </div>
+        <!--Mobile Menu-->
+        <div id="mobile-menu" class="hidden bg-white border-t md:hidden">
+         <a href="home.html" class="block px-6 py-3 hover:bg--gray-100">Home</a>
+         <a href="About.html" class="block px-6 py-3 hover:bg--gray-100">About</a>
+         <a href="service.html" class="block px-6 py-3 hover:bg--gray-100">Services</a>
+
+         <div class="p-4 px-10 ">
+            <a href="contact.html"><button class="w-full py-3 text-white rounded-lg bg-[#004E7E] hover:bg-yellow-400">Contact Us</button></a>
+         </div>
+        </div>
+    </nav>
+    <script>
+     const menuBtn = document.getElementById("menu-btn");
+     const mobileMenu = document.getElementById("mobile-menu");
+     const openIcon = document.getElementById("menu-open");
+     const closeIcon = document.getElementById("menu-close");
+
+     menuBtn.addEventListener("click",() =>{
+     mobileMenu.classList.toggle("hidden");
+     openIcon.classList.toggle("hidden");
+     closeIcon.classList.toggle("hidden");
+     })
+     </script>
+
+    <div class="mt-20">
+    <p id="demo"></p>
+
+<img id="slide" src="/PICTURE/sit4.webp" class="w-full h-60 md:items-center px-10 md:h-[380px] md:px-20 md:mx-auto">
+<br><br>
+<div class="text-center justify-center grid grid-cols-1 px-10 md:flex md:gap-10">
+    <div>
+<button onclick="startSlides()" class="w-full p-4 font-bold hover:bg-green-300 border border-black bg-[#004E7E] text-white md:text-xl">Check Available Properties</button>
+</div>
+<div>
+<button onclick="stopSlides()" class="w-full mt-4 p-4 font-bold hover:bg-green-300 border border-black bg-white text-[#004E7E] md:text-xl md:mt-0">Close</button>
+</div>
+</div>
+<script>
+const images = [
+  "/picture/hou.png ",
+  "/picture/sit2.jpg",
+  "/picture/sit3.webp",
+  "/picture/dinning.jpg",
+  "/picture/sit4.webp",
+   "/picture/Rectangle 1.png ",
+];
+
+let index = 0;
+let timer;
+
+function showNextSlide() {
+  index = (index + 1) % images.length;
+  document.getElementById("slide").src = images[index];
+}
+
+function startSlides() {
+  if (!timer) {
+    timer = setInterval(showNextSlide, 2000);
+  }
+}
+
+function stopSlides() {
+  clearInterval(timer);
+  timer = undefined;
+}
+</script>
+</div>
+
+<div class="text-center pt-5">
+  <h2 class="font-bold text-xl px-2 text-[#004E7E] md:text-4xl md:px-4">Reach Out Today</h2>
+  <h1 class="font-bold px-2 text-[#004E7E] md:text-3xl md:px-4">Get In Touch</h1>
+  <p class="px-2 pt-4 text-[#004E7E] md:text-2xl md:px-4">Whether you're looking to acquire a luxury residence or list your premium asset, our specialized advisors are ready to facilitate your journey.</p>
+  </div>
+
+  <div class="grid grid-cols-1 mt-10 gap-6 px-5 md:flex md:px-20">
+    <div class="bg-blue-100 pb-10 border border-dotted px-5 md:w-1/2 md:px-10">
+      <h2 class="mb-8 font-bold px-2 text-center mt-4 text-[#004E7E] md:text-2xl md:px-4">Send Us a Message</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+       <div>
+      <label class="mb-2 uppercase">Full Name</label>
+      <input type="text" placeholder="Full name" class="w-full py-2 px-4 border border-[#004E7E]">
+       </div>
+       <div>
+        <label class="mb-2 uppercase">Email Address</label>
+        <input type="text" placeholder="john@example.com" class="w-full py-2 px-4 border border-[#004E7E]">
+       </div>
+    </div>
+    <div>
+   <label class="block mb-2 uppercase">Subject</label>
+   <input type="text" placeholder="Property Inquiry" class="w-full py-2 px-4 border border-[#004E7E]">
+  </div>
+  <div>
+  <label class="block mb-2 uppercase mt-4">Message</label>
+    <textarea name="message" id="message" placeholder="Tell us how we can help....." rows="6" class="w-full py-2 px-4 border border-[#004E7E]"></textarea>
+     </div>
+      <button class="w-full uppercase mt-4 p-4 bg-[#004E7E] text-white font-bold hover:bg-blue-200 md:text-xl"> Submit Inquiry</button>
+   </div>
+
+   <div class="mt-4 px-10 md:px-0">
+    <h3 class="font-bold mb-6 flex items-center gap-3">
+    <span class=""> <img src="/PICTURE/logo2.png" alt="" class="w-8 h-8"></span>Our Global Headquarters </h3>
+     <p class="">1200 Avenue of the Americas, Suite 450<br/> Manhattan, New York, NY 10036<br/>United States </p>
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div>
+    <h3 class="font-bold mt-4 mb-4 flex items-center gap-3"><img src="/PICTURE/DIAL.png" alt="" class="w-8 h-8 rounded-full">Direct Line</h3>
+    <p class="pl-9">+1 (212) 555-0198</p>
+    <p class="pl-9">+1 (212) 555-0199</p>
+   </div>
+   <div>
+   <h3 class="font-bold mb-4 flex items-center gap-3"><img src="/PICTURE/sms.png" alt="" class="w-8 h-8">Electronic Mail </h3>
+  <p class="pl-9">concierge@zenithbuil.com</p>
+  <p class="pl-9">careers@zenithbuild.com</p>
+  </div>
+  </div> 
+
+  <div>
+  <h3 class="mb-6 font-bold mt-4">Connect With Us</h3>
+  <div class="flex gap-4 pl-0">
+  <a class="w-12 h-12 flex items-center justify-center" href="#"><img src="PICTURE/public.png" alt="" class="w-8 h-8"></a>
+  <a class="w-12 h-12 flex items-center justify-center" href="#"><img src="/PICTURE/share.jpg" alt="" class="h-8 w-8  border border-black hover:bg-accent-sky"></a>
+  <a class="w-12 h-12 flex items-center justify" href="#"><img src="/PICTURE/groupic.png" alt="" class="w-8 h-8 border border-black rounded-full"></a>
+  </div>
+ </div>
+  <div class="p-6 mt-4 high border-l-4">
+  <p class="italic "> "Our team typically responds to premium inquiries within two business hours during EST operation times."</p>
+  </div>
+ </div>
+ </div>
+</div>
+  </div>
+  </div>
+  </div>
+
+  <footer class="bg-blue-200 pt-5 mt-8">
+   <h2 class="text=[#004E7E] text-center text-xl font-bold mt-5 mb-5 md:text-2xl">Vist Our Headquarters</h2>
+  <div>
+  <div class="relative">
+  <img src="/PICTURE/map2.gif" alt="" class="w-full h-60 md:items-center px-10 md:h-[380px] md:px-20 md:mx-auto">
+  </div>
+  <div class="absolute left-25 right-20 top-90 flex-col justify-center items-center translate-y-2 mt-20 px-1 ">
+    <img src="/PICTURE/logo2.png" alt="" class="w-10 h-10">
+  </div>
+  </div>
+
+   <div class="bg-[#004E7E] p-10 md:p-20">
+   <div class="grid grid-cols-2 justify-between gap-6 md:flex">
+   <div>
+    <h2 class="font-bold text-[#FAFAFA] mb-8 text-2xl md:text-5xl">ZenithBuild</h2>
+    <p class="mb-8 text-white max-w-xs">Redefining luxury real estate through technology, transparency, and unparalleled service.</p>
+   </div>
+   <div><h3 class="font-bold text-white md:text-xl">SERVICES</h3>
+        <P><a href="link" class="text-white hover:text-red-500">Buying</a>
+        <P> <a href="link" class="text-white hover:text-red-500">Selling</a></P>
+        <P><a href="link" class="text-white hover:text-red-500">Management</a></P>
+    </div>
+     <div><h3 class="font-bold text-white md:text-xl">COMPANY</h3>
+        <P><a href="link" class="text-white hover:text-red-500">About Us</a>
+        <P> <a href="link" class="text-white hover:text-red-500">Careers</a></P>
+        <P><a href="link" class="text-white hover:text-red-500">Private Policy</a></P>
+    </div>
+     <div><h3 class="font-bold text-white md:text-xl">CONTACT</h3>
+        <P><a href="link" class="text-white hover:text-red-500">1200 Madison Ave, NY</a></p>
+      </div>
+   </div>
+   </div>
+   <div class="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
+  <p>© 2024 ZenithBuild Premium Realty. All rights reserved.</p>
+   <div class="flex gap-6">
+   <a class="text-on-tertiary-container text-sm hover:text-white" href="#">Terms of Service</a>
+   <a class="text-on-tertiary-container text-sm hover:text-white" href="#">Cookie Policy</a>
+  </div>
+  </div>
+  </footer>
+</body>
+</html>

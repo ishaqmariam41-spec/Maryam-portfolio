@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+   
+</head>
+<body class="bg-[#FAFAFA]">
+ <!--Nav Bar-->
+    <nav class="fixed top-0 left-0 z-50 w-full bg-blue-200">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+             <img class="w-21 md:w-21" src="/PICTURE/logo.png" alt="">
+           <!---Desktop Menu-->
+             <div class="items-center hidden space-x-8 md:flex">
+                <a href="home.html" class="text-[#004E7E] font-bold transition hover:text-red-600">Home</a>
+                <a href="About.html" class="text-[#004E7E] font-bold transition hover:text-red-600">About</a>
+                <a href="service.html" class="text-[#004E7E] font-bold transition hover:text-red-600">Service</a>
+             </div>
+            <div class="hidden md:block">
+                <a href="contact.html"><button class="px-10 py-2 text-white rounded-lg bg-[#004E7E] hover:bg-yellow-400">Contact Us</button></a>
+            </div>
+            <!---Mobile Menu Button-->
+            <button
+            id="menu-btn"
+            class="flex  items-center justify-center w-10 h-10 rounded-lg md:hidden hover:bg--gray-100"
+            >
+           <!----Hamburger Icon-->
+           <svg
+           id="menu-open"
+           xmlns="http://www.w3.org/2000/svg"
+           class="w-6 h-6"
+           full="none"
+           viewBox="0 0 24 24"
+           stroke="currentcolor"
+           >
+           <path
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           stroke-width="2"
+           d="M4 6h16M4 12h16M4 18h16"
+           />
+        </svg>
+
+        <!----Close Icon-->
+        <svg
+        id="menu-close"
+        xmlns="http://www.w3.org/2000/svg"
+        class="hidden w-6 h-6"
+           full="none"
+           viewBox="0 0 24 24"
+           stroke="currentcolor"
+         >
+          <path
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           stroke-width="2"
+           d="M6 18L18 6M6 6l12 12"
+           />
+            </svg>
+            </button>
+
+            </div>
+        </div>
+        <!--Mobile Menu-->
+        <div id="mobile-menu" class="hidden bg-white border-t md:hidden">
+         <a href="home.html" class="block px-6 py-3 hover:bg--gray-100">Home</a>
+         <a href="About.html" class="block px-6 py-3 hover:bg--gray-100">About</a>
+         <a href="service.html" class="block px-6 py-3 hover:bg--gray-100">Services</a>
+
+         <div class="p-4 px-10 ">
+           <a href="contact.html"><button class="w-full py-3 text-white rounded-lg bg-[#004E7E] hover:bg-yellow-400">Contact Us</button></a>
+         </div>
+        </div>
+    </nav>
+    <script>
+     const menuBtn = document.getElementById("menu-btn");
+     const mobileMenu = document.getElementById("mobile-menu");
+     const openIcon = document.getElementById("menu-open");
+     const closeIcon = document.getElementById("menu-close");
+
+     menuBtn.addEventListener("click",() =>{
+     mobileMenu.classList.toggle("hidden");
+     openIcon.classList.toggle("hidden");
+     closeIcon.classList.toggle("hidden");
+     })
+     </script>
+
+    <div class="relative pt">
+    <img src="/PICTURE/Rectangle 1.png" alt="" class="w-full h-80 opacity-[0.4] md:mx-auto">
+    </div>
+   <div class="absolute inset-0 flex-col justify-center items-center translate-y-2 mt-20 px-10">
+    <h2 class="text-[#004E7E] font-bold text-center text-xl md:text-2xl">OUR MISSION</h2>
+    <h2 class="text-[#004E7E] font-bold text-center text-xl md:text-5xl">Redefining Real Estate </h2>
+    <p class="text-[#004E7E] font-bold text-center text-xl md:text-2xl">Setting the gold standard in premium property management and luxury sales through data-driven insights and uncompromising services</p>
+   </div>
+   <div>
+
+    <div class="grid grid-cols-1 gap-10 mt-10 px-5 text-center justify-center md:flex flex-row">
+        <div class="md:w-1/2 object-cover rounded-lg hover:scale-90 transition:transform duration-700">
+       <img src="/PICTURE/REES2.avif" class="w-full h-[240px] md:h-[380px]"/> 
+    </div>
+    <div class="w-full md:w-1/2">
+        <h2 class="text-[#004E7E] font-bold text-2xl md:text-3xl">A 5-Year Legacy of Trust</h2>
+        <p class="text-[#004E7E] text-left mt-4 md:text-xl">Founded in 2021, ZenithBuild began with a singular vision: to bridge the gap between traditional real estate expertise and modern digital efficiency. Over the past fifteen years, we have facilitated over $2.4B in transactions, serving a discerning clientele who demand excellence.</p>
+        <p class="text-[#004E7E] text-left mt-4 md:text-xl">Our journey is built on the belief that a home is more than just an asset it's the foundation of a legacy. This philosophy guides every interaction, ensuring that our clients feel supported at every stage of their real estate journey.</p>
+        <div class="flex flex-row justify-center mt-4 text-center items-center gap-4">
+       <div>
+        <h2 class="text-[#004E7E] font-bold text-2xl md:text-3xl">15+</h2>
+        <p class="text-[#004E7E] md:text-xl">Years Active</p>
+        </div> 
+         <div>
+        <h2 class="text-[#004E7E] font-bold text-2xl md:text-3xl">2K+</h2>
+        <p class="text-[#004E7E] md:text-xl">Properties Sold</p>
+        </div>
+         <div>
+        <h2 class="text-[#004E7E] font-bold text-2xl md:text-3xl">98%</h2>
+        <p class="text-[#004E7E] md:text-xl">Client Retention</p>
+        </div>
+        </div>
+    </div>
+   </div> 
+   <h2 class="text-[#004E7E] font-bold text-2xl mt-4 text-center md:text-3xl">Our Core Values</h2>
+   <div class="grid grid-cols-1 gap-6 px-5 mt-4 justify-center md:flex md:px-10" >
+    <div class="bg-blue-50 rounded-lg p-6 text-left">
+        <img src="/PICTURE/veried.png" alt="" class="w-10 h-10 rounded-full md:w-15 h-15">
+        <h3 class="text-[#004E7E] font-bold text-xl md:text-2xl">Integrity</h3>
+        <p class="text-[#004E7E] mt-2">Transparency is our baseline. We operate with radical honesty, ensuring every client has the full picture before making critical decisions.</p>
+    </div>
+    <div class="bg-blue-50 rounded-lg p-6 text-left">
+        <img src="/PICTURE/bulb - Copy.jpg" alt="" class="w-10 h-10 rounded-full md:w-15 h-15">
+        <h3 class="text-[#004E7E] font-bold text-xl md:text-2xl">Innovation</h3>
+        <p class="text-[#004E7E] mt-2">We leverage cutting-edge PropTech and predictive analytics to provide our clients with a competitive edge in a fast-moving market.</p>
+    </div>
+   <div class="bg-blue-50 rounded-lg p-6 text-left">
+        <img src="/PICTURE/works.jpg" alt="" class="w-10 h-10 rounded-full md:w-15 h-15">
+        <h3 class="text-[#004E7E] font-bold text-xl md:text-2xl">Excellence</h3>
+        <p class="text-[#004E7E] mt-2">Good is never enough. We strive for a bespoke experience that exceeds expectations through meticulous attention to detail.</p>
+    </div>
+   </div>
+  <h2 class="text-[#004E7E] font-bold text-xl px-5 mt-4 md:text-3xl md:px-10">Leadership Team</h2>
+  <p class=" text-[#004E7E] mt-2 px-5 md:text-xl md:px-10">Meet the visionaries driving ZenithBuild forward.</p>
+
+  <div class="grid grid-cols-1 gap-6 px-5 mt-4 md:flex md:px-10">
+    <div>
+        <img src="/PICTURE/man2.jpeg" alt="" class="hover:scale-90 transition-transform duration-700">
+        <h4 class="text-[#004E7E] md:text-xl">Julian Thorne</h4>
+        <p class="text-[#004E7E] font-bold mt-1 md:text-xl">Founder &amp; CEO</p>
+    </div>
+
+    <div>
+        <img src="/PICTURE/suit2.jpg" alt="" class="border border-[#004E7E] hover:scale-90 transition-transform duration-700 w-30 h-30">
+        <h4 class="text-[#004E7E] md:text-xl">Elena Rodriguez</h4>
+        <p class="text-[#004E7E] font-bold mt-1 md:text-xl">Head of Operations</p>
+    </div>
+    <div>
+        <img src="/PICTURE/man3.jpeg" alt="" class="hover:scale-90 transition-transform duration-700 w-30 h-30">
+        <h4 class="text-[#004E7E] md:text-xl">Marcus Chen</h4>
+        <p class="text-[#004E7E] font-bold mt-1 md:text-xl">Director of Strategy</p>
+    </div>
+  </div>
+
+  <footer class="bg-blue-200 mt-8">
+    <div class="">
+   <h2 class="text-[#004E7E] mb-8 p-10 font-bold text-center text-2xl md:text-4xl md:p-20">Ready to start your next chapter?</h2>
+   <div class="justify-center items-center px-10 border-b-4 border-[#004E7E] text-center pb-10 md:px-0">
+   <button class="p-4 bg-[#004E7E] text-white w-full hover:bg-green-300 hover:text-red-500 md:text-xl md:w-80 mr-6">CONTACT OUR TEAM</button>
+   <button class="p-4 px-8 bg-blue-100 text-[#004E7E] w-full mt-4 border border-[#004E7E]  hover:bg-yellow-300 hover:text-red-500 md:text-xl md:mt-0 md:w-80">VIEW LISTINGS </button>
+   </div>
+   </div>
+
+   <div class="bg-[#004E7E] p-10 md:p-20">
+   <div class="grid grid-cols-2 justify-between gap-6 md:flex">
+   <div>
+    <h2 class="font-bold text-[#FAFAFA] mb-8 text-2xl md:text-5xl">ZenithBuild</h2>
+    <p class="mb-8 text-white max-w-xs">The intersection of high-end real estate and technological innovation. Providing luxury property solutions across the globe.</p>
+   </div>
+   <div><h3 class="font-bold text-white md:text-xl">SERVICES</h3>
+        <P><a href="link" class="text-white hover:text-red-500">Buying</a>
+        <P> <a href="link" class="text-white hover:text-red-500">Selling</a></P>
+        <P><a href="link" class="text-white hover:text-red-500">Management</a></P>
+    </div>
+     <div><h3 class="font-bold text-white md:text-xl">COMPANY</h3>
+        <P><a href="link" class="text-white hover:text-red-500">About Us</a>
+        <P> <a href="link" class="text-white hover:text-red-500">Careers</a></P>
+        <P><a href="link" class="text-white hover:text-red-500">Private Policy</a></P>
+    </div>
+     <div><h3 class="font-bold text-white md:text-xl">CONTACT</h3>
+        <P><a href="link" class="text-white hover:text-red-500">1200 Madison Ave, NY</a></p>
+      </div>
+   </div>
+   </div>
+   <div class="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
+  <p>© 2024 ZenithBuild Premium Realty. All rights reserved.</p>
+   <div class="flex gap-6">
+   <a class="text-on-tertiary-container text-sm hover:text-white" href="#">Terms of Service</a>
+   <a class="text-on-tertiary-container text-sm hover:text-white" href="#">Cookie Policy</a>
+  </div>
+  </div>
+  </footer>
+</body>
+</html>
